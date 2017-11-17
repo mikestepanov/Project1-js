@@ -24,6 +24,8 @@ var quotes = [{quote : 'You can do anything but not everything',
     year: undefined}
 ];
 
+//removes previos quote
+// and applies random new one to the #quote-box div
 function printQuote() {
   var quoteBox = document.getElementById('quote-box');
   quoteBox.innerHTML = '';
@@ -40,10 +42,8 @@ function printQuote() {
   quoteBox.innerHTML=text;
 }
 
+//takes random quote from quotes array
 function getRandomQuote() {
   var i = Math.floor(Math.random() * quotes.length);
   return quotes[i];
 }
-
-
-
